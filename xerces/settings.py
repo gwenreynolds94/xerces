@@ -29,7 +29,7 @@ class Dev(Configuration):
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
 
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['riverxerces.pythonanywhere.com']
 
 
     # Application definition
@@ -129,4 +129,3 @@ class Dev(Configuration):
 
 class Prod(Dev):
     ALLOWED_HOSTS = ['riverxerces.pythonanywhere.com']
-    DEBUG = False
