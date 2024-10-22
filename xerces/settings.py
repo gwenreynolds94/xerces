@@ -130,3 +130,4 @@ class Dev(Configuration):
 
 class Prod(Dev):
     ALLOWED_HOSTS = ['riverxerces.pythonanywhere.com']
+    DEBUG = False
