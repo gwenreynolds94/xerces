@@ -14,8 +14,9 @@ path = os.path.expanduser("~/xerces")
 if path not in sys.path:
     sys.path.insert(0, path)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'xerces.settings'
+os.environ['DJANGO_CONFIGURATION'] = 'Prod'
 
-from django.core.wsgi import get_wsgi_application
+from configurations.wsgi import get_wsgi_application
 from django.contrib.staticfiles.handlers import StaticFilesHandler
 
 application = StaticFilesHandler(get_wsgi_application())
