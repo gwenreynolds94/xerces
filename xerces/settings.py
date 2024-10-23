@@ -43,6 +43,8 @@ class Dev(Configuration):
         "django.contrib.staticfiles",
         "home",
         "blog",
+        "polls",
+        "hello",
     ]
 
     MIDDLEWARE = [
@@ -124,7 +126,7 @@ class Dev(Configuration):
     STATIC_URL = "static/"
     STATIC_ROOT = BASE_DIR / 'static'
     STATICFILES_DIRS = [
-        BASE_DIR / 'staticfiles',
+        BASE_DIR / 'static',
     ]
 
 
@@ -134,5 +136,5 @@ class Dev(Configuration):
     DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 class Prod(Dev):
-    ALLOWED_HOSTS = ['riverxerces.pythonanywhere.com']
+    ALLOWED_HOSTS = ['riverxerces.pythonanywhere.com', '*']
     DEBUG = False
