@@ -1,3 +1,14 @@
+
+.nav {
+    width: 60%;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+}
+.nav-container {
+    background: #c0cfdf;
+}
 .nav .btn {
     margin: 5px;
+    flex: 1;
 }
