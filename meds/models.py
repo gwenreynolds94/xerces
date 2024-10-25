@@ -9,13 +9,13 @@ class Medication(models.Model):
 
 
 class Prescription(models.Model):
-    MEASUREMENT_CHOICES = {
-        'mg': 'Milligrams',
-        'gm': 'Grams',
-        'ml': 'Milliliters',
-        'cp': 'Cups',
-    }
+    MEASUREMENT_CHOICES = (
+        ('mg', 'Milligrams'),
+        ('gm', 'Grams'),
+        ('ml', 'Milliliters'),
+        ('cp', 'Cups'),
+    )
     medication = models.ForeignKey(Medication, on_delete=models.CASCADE)
     amount = models.FloatField()
-    measurement = models.CharField(max_length=2, choices=MEASUREMENT_CHOICES)
+    measurement = models.CharField(max_length=2, choices=MEASUREMENT_CHOICES, default='mg')
 

@@ -46,6 +46,7 @@ class Dev(Configuration):
         "polls",
         "hello",
         "autos",
+        "meds",
     ]
 
     MIDDLEWARE = [
