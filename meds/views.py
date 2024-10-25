@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from .models import Medication
 
 class IndexView(LoginRequiredMixin, TemplateView):
     template_name = "meds/index.html"
+
+class MedicationListView(LoginRequiredMixin, ListView):
+    model = Medication
+    paginate_by = 500
 
 # Create your views here.
 class UpdateMedicationList(LoginRequiredMixin, View):

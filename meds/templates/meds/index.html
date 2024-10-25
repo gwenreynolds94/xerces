@@ -3,7 +3,7 @@
 {% block title %}Meds{% endblock %}
 
 {% block content %}
-meds index
+<a href="{% url 'meds:medication-list' %}">Medication List</a>
 <form method="post" action="{% url 'meds:update-medication-list' %}">
     {% csrf_token %}
     <button type="submit">Update medication list</button>
