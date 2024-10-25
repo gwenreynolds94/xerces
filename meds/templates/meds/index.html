@@ -6,6 +6,6 @@
 meds index
 <form method="post" action="{% url 'meds:update-medication-list' %}">
     {% csrf_token %}
-    <input type="submit" value="Update Medication List">
+    <button type="submit">Update medication list</button>
 </form>
 {% endblock %}
