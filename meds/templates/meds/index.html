@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Meds{% endblock %}
+
+{% block content %}
+meds index
+<form method="post" action="{% url 'meds:update-medication-list' %}">
+    <input type="submit" value="Update Medication List">
+</form>
+{% endblock %}
